@@ -1,52 +1,85 @@
-import { useState, useEffect } from "react"
-import banner_img from "@/assets/hero-banner.gif"
+import { useState, useEffect } from "react";
+import { getTimeInSeconds } from "@/utils/getTime";
+import { Skeleton } from "@/components/ui/skeleton";
 
 export default function HeroBanner() {
     return (
         <div
             className="relative w-full h-160 flex flex-col items-center bg-center bg-cover bg-no-repeat"
-            style={{ backgroundImage: `url('${banner_img}')`}}
         >
+            {/* 🎞️ Background video */}
+            <video
+                className="absolute top-0 left-0 w-full h-full object-cover"
+                src="https://ugc.production.linktr.ee/c1432719-2cd6-4856-a730-80bbd1a7cd4f_Final-6th-Version.mp4"
+                poster="https://ugc.production.linktr.ee/ab038f77-2f50-4244-ac0b-fb829a701dc8_thumbnail.jpeg"
+                autoPlay
+                loop
+                muted
+                playsInline
+            />
+
             <div className="absolute inset-0 bg-black/80" /> {/* overlay */}
 
-            <div className="relative w-full p-8 h-16 flex justify-between items-center">
-                <p className="font-bold text-xl text-white">DOUBLE DECKER</p>
+            <div className="relative w-full px-8 h-16 flex justify-between items-center">
+                <p className="font-bold text-xl text-white" style={{fontFamily : "Space Mono"}}>DOUBLE DECKER</p>
             </div>
 
             <div className="relative flex-1 w-full pt-36 flex flex-col items-center gap-4">
                 <h1 className="text-4xl font-bold text-center text-white">Dive Into Telkomsel Atmosphere</h1>
                 <p className="text-lg tracking-wide text-white">Start your journey now! Campus today, company tomorrow.</p>
                 <p className="mt-4 text-lg tracking-wide text-white">COUNTDOWN KEBERANGKATAN</p>
-                <Countdown initialSeconds={7 * 60 * 60}/>
+                <Countdown/>
             </div>
         </div>
     )
 }
 
-type CountdownProps = {
-  initialSeconds: number;
-}
-
-function Countdown({ initialSeconds }: CountdownProps) {
-    const [timeLeft, setTimeLeft] = useState(initialSeconds);
+function Countdown() {
+    const [timeLeft, setTimeLeft] = useState<number | null>(null);
 
     useEffect(() => {
-        if (timeLeft <= 0) return;
+        getTimeInSeconds()
+        .then((seconds) => {
+            setTimeLeft(seconds);
+        })
+        .catch(console.error);
+    }, []);
+
+    useEffect(() => {
+        if (timeLeft === null || timeLeft <= 0) return;
 
         const timer = setInterval(() => {
-        setTimeLeft((prev) => prev - 1);
+            setTimeLeft((prev) => (prev !== null ? prev - 1 : 0));
         }, 1000);
 
         return () => clearInterval(timer);
     }, [timeLeft]);
+
+    if (timeLeft === null) {
+        return (
+            <div className="w-70 flex justify-between">
+                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
+                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
+                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
+                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
+            </div>
+        )
+    }
 
     const hours = Math.floor(timeLeft / 3600);
     const minutes = Math.floor(timeLeft / 60) % 60;
     const seconds = timeLeft % 60;
 
     return (
-        <div className="flex items-center justify-center text-5xl text-white font-semibold" style={{fontFamily : "sans-serif"}}>
-            {hours.toString().padStart(2, "0")}{" : "}{minutes.toString().padStart(2, "0")}{" : "}{seconds.toString().padStart(2, "0")}
-        </div>
+        <>
+            <div
+                className="flex items-center justify-center text-5xl text-white font-semibold"
+                style={{ fontFamily: "sans-serif" }}
+            >
+                {hours.toString().padStart(2, "0")} :{" "}
+                {minutes.toString().padStart(2, "0")} :{" "}
+                {seconds.toString().padStart(2, "0")}
+            </div>
+        </>
     );
-};
+}
