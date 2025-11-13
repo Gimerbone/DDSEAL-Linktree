@@ -1,17 +1,22 @@
+import bg_office from "@/assets/bg_office.jpeg";
+
 export default function QuickLinks() {
     return (
-        <div className="w-full py-32 flex flex-col items-center gap-10">
-            <h2 className="text-3xl font-bold">Pusat Informasi</h2>
-            <div className="grid grid-cols-2 gap-y-8 gap-x-10">
+        <div
+            className="relative w-full md:py-32 py-16 flex flex-col items-center md:gap-12 gap-10 bg-center bg-cover bg-no-repeat"
+            style={{backgroundImage : `url("${bg_office}")`}}
+        >
+            <div className="absolute inset-0 bg-black/80" /> {/* overlay */}
+
+            <h2 className="text-white relative md:text-4xl text-2xl font-bold">Pusat Informasi</h2>
+            <div className="relative grid lg:mt-0 mt-4 md:grid-cols-2 grid-cols-1 md:gap-y-10 gap-y-6 gap-x-10">
                 <LinkContainer title = "Rundown Acara"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
-                <LinkContainer title = "AAAA"/>
+                <LinkContainer title = "Denah Tempat Duduk Bus"/>
+                <LinkContainer title = "Daftar Peserta"/>
+                <LinkContainer title = "Tim Panitia"/>
+                <LinkContainer title = "Petunjuk Pengajuan Dispen"/>
+                <LinkContainer title = "Peraturan dan Perlengkapan"/>
+                <LinkContainer title = "FAQ"/>
             </div>
         </div>
     )
@@ -25,8 +30,8 @@ type LinkContainerProps = {
 
 function LinkContainer({icon = "", title = "", link = ""} : LinkContainerProps) {
     return (
-        <div className="hover:cursor-pointer hover:brightness-95 w-72 h-16 bg-red-800 rounded-2xl flex items-center justify-center">
-            <p className="text-white">{title}</p>
+        <div className="hover:cursor-pointer hover:bg-red-900/90 active:bg-red-800 md:px-0 md:w-88 md:h-20 w-[90vw] h-[20vw] bg-red-950 rounded-2xl flex items-center justify-center">
+            <p className="text-white md:text-lg">{title}</p>
         </div>
     )
 }

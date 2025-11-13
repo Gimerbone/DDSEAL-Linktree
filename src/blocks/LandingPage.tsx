@@ -2,6 +2,7 @@ import HeroBanner from "./HeroBanner";
 import Announcement from "./Announcement";
 import QuickLinks from "./QuickLinks";
 import Maps from "./Maps";
+import Footer from "./Footer";
 
 export default function LandingPage() {
     return (
@@ -17,8 +18,9 @@ export default function LandingPage() {
             <div className="w-full">
                 <HeroBanner />
                 <Announcement />
-                <QuickLinks/>
-                <Maps></Maps>
+                <QuickLinks />
+                <Maps />
+                <Footer />
             </div>
         </div>
     )

@@ -5,7 +5,7 @@ import { Skeleton } from "@/components/ui/skeleton";
 export default function HeroBanner() {
     return (
         <div
-            className="relative w-full h-160 flex flex-col items-center bg-center bg-cover bg-no-repeat"
+            className="relative w-full h-200 flex flex-col items-center bg-center bg-cover bg-no-repeat"
         >
             {/* 🎞️ Background video */}
             <video
@@ -20,14 +20,14 @@ export default function HeroBanner() {
 
             <div className="absolute inset-0 bg-black/80" /> {/* overlay */}
 
-            <div className="relative w-full px-8 h-16 flex justify-between items-center">
+            <div className="relative w-full md:px-8 px-4 h-16 flex justify-between items-center">
                 <p className="font-bold text-xl text-white" style={{fontFamily : "Space Mono"}}>DOUBLE DECKER</p>
             </div>
 
-            <div className="relative flex-1 w-full pt-36 flex flex-col items-center gap-4">
-                <h1 className="text-4xl font-bold text-center text-white">Dive Into Telkomsel Atmosphere</h1>
-                <p className="text-lg tracking-wide text-white">Start your journey now! Campus today, company tomorrow.</p>
-                <p className="mt-4 text-lg tracking-wide text-white">COUNTDOWN KEBERANGKATAN</p>
+            <div className="relative md:pl-24 pt-24 px-4 flex-1 w-full flex flex-col items-start gap-8">
+                <h1 className="md:w-120 md:text-7xl md:leading-20 text-[55px] leading-16 font-bold text-white">Dive Into Telkomsel Atmosphere</h1>
+                <p className="md:w-120 text-lg tracking-wide text-white">Selamat Datang di Pusat Informasi Double Decker 2025! Start your journey now! Campus today, company tomorrow.</p>
+                <p className="text-lg tracking-wide text-white">COUNTDOWN KEBERANGKATAN</p>
                 <Countdown/>
             </div>
         </div>
