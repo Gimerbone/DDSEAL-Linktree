@@ -16,8 +16,8 @@ export default function Announcement() {
             <div className="absolute inset-0 bg-black/85" /> {/* overlay */}
 
             <div className="relative flex flex-col items-center gap-4">
-                <h2 className="text-white md:text-4xl text-2xl font-bold">Announcement</h2>
-                <p className="text-white md:text-lg md:w-fit w-screen px-4 text-center">Jangan lupa untuk stay tune untuk informasi selanjutnya!</p>
+                <h2 className="text-white lg:text-4xl md:text-3xl text-2xl font-bold">Announcement</h2>
+                <p className="text-white lg:text-lg md:w-fit w-screen px-4 text-center">Jangan lupa untuk stay tune untuk informasi selanjutnya!</p>
             </div>
 
             <Carousel

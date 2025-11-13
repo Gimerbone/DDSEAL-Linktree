@@ -24,7 +24,7 @@ export default function HeroBanner() {
                 <p className="font-bold text-xl text-white" style={{fontFamily : "Space Mono"}}>DOUBLE DECKER</p>
             </div>
 
-            <div className="relative md:pl-24 pt-24 px-4 flex-1 w-full flex flex-col items-start gap-8">
+            <div className="relative lg:pl-24 md:pl-16 pt-24 px-4 flex-1 w-full flex flex-col items-start gap-8">
                 <h1 className="md:w-120 md:text-7xl md:leading-20 text-[55px] leading-16 font-bold text-white">Step Into the Future with CTI</h1>
                 <p className="md:w-120 text-lg tracking-wide text-white">Selamat Datang di Pusat Informasi Double Decker 2025! Start your journey now! Campus today, company tomorrow.</p>
                 <p className="text-lg tracking-wide text-white">COUNTDOWN KEBERANGKATAN</p>

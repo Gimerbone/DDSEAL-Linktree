@@ -10,8 +10,8 @@ export default function QuickLinks() {
         >
             <div className="absolute inset-0 bg-black/80" /> {/* overlay */}
 
-            <h2 className="text-white relative md:text-4xl text-2xl font-bold">Pusat Informasi</h2>
-            <div className="relative grid lg:mt-0 mt-4 md:grid-cols-2 grid-cols-1 md:gap-y-10 gap-y-6 gap-x-10">
+            <h2 className="text-white relative lg:text-4xl md:text-3xl text-2xl font-bold">Pusat Informasi</h2>
+            <div className="relative grid lg:mt-0 mt-4 lg:grid-cols-2 grid-cols-1 md:gap-y-10 gap-y-6 gap-x-10">
                 <LinkContainer icon={CalendarClock} title = "Rundown Acara" link="https://example.com/"/>
                 <LinkContainer icon={BusFront} title = "Denah Tempat Duduk Bus" link="https://example.com/"/>
                 <LinkContainer icon={ClipboardList} title = "Daftar Peserta" link="https://example.com/"/>
