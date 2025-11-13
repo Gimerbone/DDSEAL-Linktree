@@ -10,13 +10,13 @@ export default function QuickLinks() {
 
             <h2 className="text-white relative md:text-4xl text-2xl font-bold">Pusat Informasi</h2>
             <div className="relative grid lg:mt-0 mt-4 md:grid-cols-2 grid-cols-1 md:gap-y-10 gap-y-6 gap-x-10">
-                <LinkContainer title = "Rundown Acara"/>
-                <LinkContainer title = "Denah Tempat Duduk Bus"/>
-                <LinkContainer title = "Daftar Peserta"/>
-                <LinkContainer title = "Tim Panitia"/>
-                <LinkContainer title = "Petunjuk Pengajuan Dispen"/>
-                <LinkContainer title = "Peraturan dan Perlengkapan"/>
-                <LinkContainer title = "FAQ"/>
+                <LinkContainer title = "Rundown Acara" link="https://example.com/"/>
+                <LinkContainer title = "Denah Tempat Duduk Bus" link="https://example.com/"/>
+                <LinkContainer title = "Daftar Peserta" link="https://example.com/"/>
+                <LinkContainer title = "Tim Panitia" link="https://example.com/"/>
+                <LinkContainer title = "Petunjuk Pengajuan Dispen" link="https://example.com/"/>
+                <LinkContainer title = "Peraturan dan Perlengkapan" link="https://example.com/"/>
+                <LinkContainer title = "FAQ" link="https://example.com/"/>
             </div>
         </div>
     )
@@ -28,10 +28,10 @@ type LinkContainerProps = {
     link? : string,
 }
 
-function LinkContainer({icon = "", title = "", link = ""} : LinkContainerProps) {
+function LinkContainer({icon = "", title = "", link = "https://example.com/"} : LinkContainerProps) {
     return (
-        <div className="hover:cursor-pointer hover:bg-red-900/90 active:bg-red-800 md:px-0 md:w-88 md:h-20 w-[90vw] h-[20vw] bg-red-950 rounded-2xl flex items-center justify-center">
-            <p className="text-white md:text-lg">{title}</p>
-        </div>
+        <button className="hover:cursor-pointer hover:bg-red-900/90 active:bg-red-800 md:px-0 md:w-88 md:h-20 w-[85vw] h-[17vw] bg-red-950 rounded-2xl flex items-center justify-center">
+            <p className="text-white font-medium md:text-lg">{title}</p>
+        </button>
     )
 }
