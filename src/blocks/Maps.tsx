@@ -1,10 +1,10 @@
 export default function Maps() {
     return (
         <div
-            className="relative bg-[#eefbff] pt-20 h-180 w-full flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-32 gap-12"
+            className="relative bg-[#eefbff] py-32 w-full flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-32 gap-12"
         >
-            <div className="relative bg-[#eefbff] md:bg-white rounded-4xl py-16 w-330 flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-32 gap-12">
-                <div className="relative flex flex-col lg:items-start items-center pt-4 md:h-100 lg:gap-2">
+            <div className="relative bg-[#eefbff] md:bg-white rounded-4xl md:py-16 lg:w-330 flex lg:flex-row flex-col-reverse items-center justify-center lg:gap-32 gap-12">
+                <div className="relative flex flex-col lg:items-start items-center pt-4 lg:h-100 lg:gap-2">
                     <p className="font-bold lg:text-4xl md:text-3xl text-2xl lg:text-left text-center">Lokasi Tujuan</p>
                     <p className="pt-4 lg:text-lg lg:w-120 md:w-[90vw] w-[85vw] lg:text-left text-justify md:text-center">Jl. Gatot Subroto No.24-25, Kuningan Bar., Kec. Mampang Prpt., Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12930</p>
                     <button
