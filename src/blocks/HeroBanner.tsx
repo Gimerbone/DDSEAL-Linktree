@@ -1,6 +1,4 @@
-import { useState, useEffect } from "react";
-import { getTimeInSeconds } from "@/utils/getTime";
-import { Skeleton } from "@/components/ui/skeleton";
+import { Countdown } from "@/components/custom/Countdown"
 
 export default function HeroBanner() {
     return (
@@ -25,61 +23,11 @@ export default function HeroBanner() {
             </div>
 
             <div className="relative lg:pl-24 md:pl-16 pt-24 px-4 flex-1 w-full flex flex-col items-start gap-8">
-                <h1 className="md:w-120 md:text-7xl md:leading-20 text-[55px] leading-16 font-bold text-white">Step Into the Future with CTI</h1>
+                <h1 className="md:w-120 md:text-7xl md:leading-20 text-[55px] leading-16 font-bold text-white">Step Into the Future with CTI Group</h1>
                 <p className="md:w-120 text-lg tracking-wide text-white">Selamat Datang di Pusat Informasi Double Decker 2025! Start your journey now! Campus today, company tomorrow.</p>
                 <p className="text-lg tracking-wide text-white">COUNTDOWN KEBERANGKATAN</p>
                 <Countdown/>
             </div>
         </div>
     )
-}
-
-function Countdown() {
-    const [timeLeft, setTimeLeft] = useState<number | null>(null);
-
-    useEffect(() => {
-        getTimeInSeconds()
-        .then((seconds) => {
-            setTimeLeft(seconds);
-        })
-        .catch(console.error);
-    }, []);
-
-    useEffect(() => {
-        if (timeLeft === null || timeLeft <= 0) return;
-
-        const timer = setInterval(() => {
-            setTimeLeft((prev) => (prev !== null ? prev - 1 : 0));
-        }, 1000);
-
-        return () => clearInterval(timer);
-    }, [timeLeft]);
-
-    if (timeLeft === null) {
-        return (
-            <div className="w-70 flex justify-between">
-                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
-                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
-                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
-                <Skeleton className="h-16 w-16 rounded-3xl bg-white/30" />
-            </div>
-        )
-    }
-
-    const hours = Math.floor(timeLeft / 3600);
-    const minutes = Math.floor(timeLeft / 60) % 60;
-    const seconds = timeLeft % 60;
-
-    return (
-        <>
-            <div
-                className="flex items-center justify-center text-5xl text-white font-semibold"
-                style={{ fontFamily: "sans-serif" }}
-            >
-                {hours.toString().padStart(2, "0")} :{" "}
-                {minutes.toString().padStart(2, "0")} :{" "}
-                {seconds.toString().padStart(2, "0")}
-            </div>
-        </>
-    );
 }

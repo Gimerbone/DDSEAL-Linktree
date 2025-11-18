@@ -1,23 +1,16 @@
-import bg_office from "@/assets/bg_office.jpeg";
 import { type LucideIcon } from "lucide-react"
-import { Users, ClipboardList, CalendarClock, BusFront, UserPen, Shirt, MessageCircleMore } from "lucide-react";
+import { ArrowUpRight, Users, ClipboardList, CalendarClock, BusFront, Shirt, MessageCircleMore } from "lucide-react";
 
 export default function QuickLinks() {
     return (
-        <div
-            className="relative w-full md:py-32 py-16 flex flex-col items-center md:gap-12 gap-10 bg-center bg-cover bg-no-repeat"
-            style={{backgroundImage : `url("${bg_office}")`}}
-        >
-            <div className="absolute inset-0 bg-black/80" /> {/* overlay */}
-
-            <h2 className="text-white relative lg:text-4xl md:text-3xl text-2xl font-bold">Pusat Informasi</h2>
-            <div className="relative grid lg:mt-0 mt-4 lg:grid-cols-2 grid-cols-1 md:gap-y-10 gap-y-6 gap-x-10">
-                <LinkContainer icon={CalendarClock} title = "Rundown Acara" link="https://example.com/"/>
-                <LinkContainer icon={BusFront} title = "Denah Tempat Duduk Bus" link="https://example.com/"/>
-                <LinkContainer icon={ClipboardList} title = "Daftar Peserta" link="https://example.com/"/>
+        <div className="relative bg-white w-full py-24 md:py-32 flex flex-col items-center justify-center md:gap-12 gap-10">
+            <h2 className="relative lg:text-4xl md:text-3xl text-2xl font-bold">Pusat Informasi</h2>
+            <div className="relative rounded-4xl w-screen md:w-230 p-4 md:p-8 bg-white flex flex-wrap justify-center gap-4 md:gap-6">
+                <LinkContainer icon={CalendarClock} title = "Rundown Acara" link="https://drive.google.com/file/d/1_d18TW8VXJrGArGUocX0ZRn5v1VN1CHG/view?usp=drive_link"/>
+                <LinkContainer icon={BusFront} title = "Denah Kursi Bus" link="https://drive.google.com/file/d/1lTA9_5Uba2w7PD9IEwmdpDDiik_IiW9R/view?usp=drive_link"/>
                 <LinkContainer icon={Users} title = "Tim Panitia" link="https://example.com/"/>
-                <LinkContainer icon={UserPen} title = "Petunjuk Pengajuan Dispen" link="https://example.com/"/>
-                <LinkContainer icon={Shirt} title = "Peraturan dan Perlengkapan" link="https://example.com/"/>
+                <LinkContainer icon={ClipboardList} title = "Template Dispen" link="https://example.com/"/>
+                <LinkContainer icon={Shirt} title = "Perlengkapan" link="https://example.com/"/>
                 <LinkContainer icon={MessageCircleMore} title = "FAQ" link="https://example.com/"/>
             </div>
         </div>
@@ -34,14 +27,16 @@ export function LinkContainer({icon: Icon, title = "Test Title", link = "https:/
     return (
         <button
             onClick={() => window.open(link, "_blank", "noopener,noreferrer")}
-            className="flex items-center justify-center hover:cursor-pointer hover:bg-red-900/90 active:bg-red-800 md:px-0 md:w-98 md:h-20 w-[85vw] h-[17vw] bg-red-950 rounded-2xl gap-2"
+            className="aspect-square cursor-pointer h-38 md:h-48 p-4 md:p-6 flex flex-col rounded-2xl hover:bg-[#1b728c] active:bg-[#188aac] bg-[#00546e]"
         >
-            <div className="w-4"/>
+            <p className="text-white text-sm md:text-[16px] text-start font-medium">{title}</p>
 
-            {Icon && <Icon className="w-7 h-7 text-white" />}
+            <div className="flex-1 flex items-end justify-between">
+                {Icon && (
+                    <Icon className="text-white -ml-3 md:-ml-2 w-[50%] h-[50%] object-contain" />
+                )}
 
-            <div className="flex-1 flex justify-center items-center">
-                <p className="text-white font-medium md:text-lg">{title}</p>
+                <ArrowUpRight className="text-white w-[20%] h-[20%]"/>
             </div>
         </button>
     )
