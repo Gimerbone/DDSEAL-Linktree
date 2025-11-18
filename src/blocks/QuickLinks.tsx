@@ -5,7 +5,7 @@ export default function QuickLinks() {
     return (
         <div className="relative bg-white w-full py-24 md:py-32 flex flex-col items-center justify-center md:gap-12 gap-10">
             <h2 className="relative lg:text-4xl md:text-3xl text-2xl font-bold">Pusat Informasi</h2>
-            <div className="relative rounded-4xl w-screen md:max-w-180 lg:w-230 p-4 md:p-8 bg-white flex flex-wrap justify-center gap-4 md:gap-6">
+            <div className="relative rounded-4xl w-screen md:max-w-180 lg:max-w-230 p-4 md:p-8 bg-white flex flex-wrap justify-center gap-4 md:gap-6">
                 <LinkContainer icon={ClipboardList} title = "Rundown Acara" link="https://drive.google.com/file/d/1_d18TW8VXJrGArGUocX0ZRn5v1VN1CHG/view?usp=drive_link"/>
                 <LinkContainer icon={BusFront} title = "Denah Kursi Bus" link="https://drive.google.com/file/d/1lTA9_5Uba2w7PD9IEwmdpDDiik_IiW9R/view?usp=drive_link"/>
                 <LinkContainer icon={Users} title = "Tim Panitia" link="https://example.com/"/>
