@@ -1,3 +1,5 @@
+import { Toaster } from "@/components/ui/sonner";
+
 import HeroBanner from "./HeroBanner";
 import Announcement from "./Announcement";
 import QuickLinks from "./QuickLinks";
@@ -15,6 +17,7 @@ export default function LandingPage() {
         /**Maps dengan Lokasi tujuan */
 
         <div className="w-screen flex justify-center">
+            <Toaster/>
             <div className="w-full">
                 <HeroBanner />
                 <Announcement />
