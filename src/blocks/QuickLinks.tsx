@@ -3,6 +3,20 @@ import { NotebookPen, Clapperboard, ArrowUpRight, Users, ClipboardList, FileText
 import { Contact, ScrollText, BusFront, PencilRuler, MessageCircleMore } from "lucide-react";
 
 import { toast } from "sonner";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion"
 
 export default function QuickLinks() {
     return (
@@ -14,15 +28,98 @@ export default function QuickLinks() {
                 <LinkContainer icon={Users} title = "Daftar Peserta" link="https://drive.google.com/file/d/1nkWUCOKflbdtwuc_QmyV9S6rK0SnW8im/view?usp=drive_link"/>
                 <LinkContainer icon={Contact} title = "Tim Panitia" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
-                <LinkContainer icon={ScrollText} title = "Peraturan" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
                 <LinkContainer icon={PencilRuler} title = "Perlengkapan" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
-                <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video belum dapat diakses" link="https://example.com/"/>
-                <LinkContainer icon={MessageCircleMore} title = "FAQ" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
-                <LinkContainer icon={NotebookPen} title = "Feedback Peserta" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video ini belum dapat diakses" link="https://example.com/"/>
+                
+                <Dialog>
+                    <DialogTrigger>
+                        <LinkContainer icon={MessageCircleMore} title = "FAQ"/>
+                    </DialogTrigger>
+                    <DialogContent>
+                        <DialogHeader>
+                            <DialogTitle>FAQ</DialogTitle>
+                        </DialogHeader>
+                        
+                        <div className="max-h-80 overflow-y-auto pr-4 -mr-2">
+                            <Accordion
+                            type="single"
+                            collapsible
+                            className="w-full"
+                            defaultValue="item-1"
+                        >
+                            <AccordionItem value="item-1">
+                                <AccordionTrigger>Apa saja yang perlu dibawa pada saat hari-h acara?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>Jawaban menyusul</p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-2">
+                                    <AccordionTrigger>Dimana titik kumpul dan kapan waktu keberangkatan?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Titik kumpul: TUCH <br/>
+                                            Waktu: 07.00 <br/>
+                                            Jangan sampai telat yaa!
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-3">
+                                    <AccordionTrigger>Apa yang terjadi jika saya terlambat ke titik kumpul?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Jawaban menyusul
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-4">
+                                    <AccordionTrigger>Apakah akan ada presensi?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Jawaban menyusul
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-5">
+                                    <AccordionTrigger>Apakah Konsumsi Disediakan Panitia?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Jawaban menyusul
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-6">
+                                    <AccordionTrigger>Bagaimana jika saya mengalami kendala kesehatan?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Jawaban menyusul
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-7">
+                                    <AccordionTrigger>Siapa yang bisa saya hubungi jika ada kendala?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Jawaban menyusul
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                            </Accordion>
+                        </div>
+                    </DialogContent>
+                </Dialog>
+
+                <LinkContainer icon={NotebookPen} title = "Form Feedback" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
             </div>
         </div>
     )
 }
+
+// function QuestionContainer({question, answer} : {question? : string; answer? : string}) {
+//     return (
+//         <div></div>
+//     )
+// }
 
 type LinkContainerProps = {
   icon?: LucideIcon
@@ -32,10 +129,10 @@ type LinkContainerProps = {
   toastMsg?: string
 }
 
-export function LinkContainer({
+function LinkContainer({
     icon: Icon,
     title = "Lorem Ipsum",
-    link = "https://example.com/",
+    link = "",
     hasToast = false,
     toastMsg = "",
 }: LinkContainerProps) {
@@ -44,7 +141,7 @@ export function LinkContainer({
             onClick={() => {
                 if (hasToast) {
                     toast.info(`${toastMsg}`)
-                } else {
+                } else if (link !== "") {
                     window.open(link, "_blank", "noopener,noreferrer")
                 }
             }}

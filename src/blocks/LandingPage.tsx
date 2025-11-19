@@ -17,7 +17,7 @@ export default function LandingPage() {
         /**Maps dengan Lokasi tujuan */
 
         <div className="w-screen flex justify-center">
-            <Toaster/>
+            <Toaster position="top-right"/>
             <div className="w-full">
                 <HeroBanner />
                 <Announcement />
