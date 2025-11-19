@@ -29,7 +29,7 @@ export default function QuickLinks() {
                 <LinkContainer icon={Contact} title = "Tim Panitia" link="https://drive.google.com/file/d/13f_AIu0KV71A37KmGA9_ObJh_U0r1xCK/view?usp=drive_link"/>
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
                 <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
-                <LinkContainer icon={PencilRuler} title = "Perlengkapan" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={PencilRuler} title = "Perlengkapan" link="https://drive.google.com/file/d/1yfjgXjuOx5-3DzlWHB22S9gQ7VxVUtTX/view?usp=drive_link"/>
                 <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video ini belum dapat diakses"/>
                 
                 <Dialog>
