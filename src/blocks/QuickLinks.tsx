@@ -128,7 +128,7 @@ export default function QuickLinks() {
                     </DialogContent>
                 </Dialog>
 
-                <LinkContainer icon={NotebookPen} title = "Form Feedback" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={NotebookPen} title = "Form Absensi dan Feedback" link="https://bit.ly/PRESENSI-DOUBLEDECKER2025"/>
             </div>
         </div>
     )
