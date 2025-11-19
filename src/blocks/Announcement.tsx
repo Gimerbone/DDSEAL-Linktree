@@ -9,7 +9,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import DresscodeIMG from "@/assets/dresscode.jpeg";
 import bc_tuch from "@/assets/bc_tuch.jpg";
 import bc_dresscode from "@/assets/bc_dresscode.jpg";
-import bc_smoking from "@/assets/bc_smoking.jpg";
+import bc_smoking from "@/assets/bc_smoking.png";
 import bc_makanan from "@/assets/bc_makanan.jpg";
 import bc_sarapan from "@/assets/bc_sarapan.jpg";
 import bc_payung from "@/assets/bc_payung.jpg";
