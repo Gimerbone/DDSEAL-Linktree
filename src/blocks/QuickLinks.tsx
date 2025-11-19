@@ -26,7 +26,7 @@ export default function QuickLinks() {
                 <LinkContainer icon={ClipboardList} title = "Rundown Acara" link="https://drive.google.com/file/d/1_d18TW8VXJrGArGUocX0ZRn5v1VN1CHG/view?usp=drive_link"/>
                 <LinkContainer icon={BusFront} title = "Denah Kursi Bus" link="https://drive.google.com/file/d/1lTA9_5Uba2w7PD9IEwmdpDDiik_IiW9R/view?usp=drive_link"/>
                 <LinkContainer icon={Users} title = "Daftar Peserta" link="https://drive.google.com/file/d/1nkWUCOKflbdtwuc_QmyV9S6rK0SnW8im/view?usp=drive_link"/>
-                <LinkContainer icon={Contact} title = "Tim Panitia" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={Contact} title = "Tim Panitia" link="https://drive.google.com/file/d/13f_AIu0KV71A37KmGA9_ObJh_U0r1xCK/view?usp=drive_link"/>
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
                 <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
                 <LinkContainer icon={PencilRuler} title = "Perlengkapan" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>

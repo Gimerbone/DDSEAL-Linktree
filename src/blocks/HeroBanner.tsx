@@ -1,4 +1,5 @@
 import { Countdown } from "@/components/custom/Countdown"
+import VideoBanner from "@/assets/hero_video.mp4"
 
 export default function HeroBanner() {
     return (
@@ -8,7 +9,7 @@ export default function HeroBanner() {
             {/* 🎞️ Background video */}
             <video
                 className="absolute top-0 left-0 w-full h-full object-cover"
-                src="https://ugc.production.linktr.ee/c1432719-2cd6-4856-a730-80bbd1a7cd4f_Final-6th-Version.mp4"
+                src={VideoBanner}
                 poster="https://ugc.production.linktr.ee/ab038f77-2f50-4244-ac0b-fb829a701dc8_thumbnail.jpeg"
                 autoPlay
                 loop
