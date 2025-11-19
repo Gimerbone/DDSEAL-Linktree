@@ -30,7 +30,7 @@ export default function QuickLinks() {
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
                 <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
                 <LinkContainer icon={PencilRuler} title = "Perlengkapan" hasToast toastMsg="Fitur ini belum dapat diakses" link="https://example.com/"/>
-                <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video ini belum dapat diakses" link="https://example.com/"/>
+                <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video ini belum dapat diakses"/>
                 
                 <Dialog>
                     <DialogTrigger>
@@ -43,15 +43,19 @@ export default function QuickLinks() {
                         
                         <div className="max-h-80 overflow-y-auto pr-4 -mr-2">
                             <Accordion
-                            type="single"
-                            collapsible
-                            className="w-full"
-                            defaultValue="item-1"
-                        >
+                                type="single"
+                                collapsible
+                                className="w-full"
+                                defaultValue="item-1"
+                            >
                             <AccordionItem value="item-1">
-                                <AccordionTrigger>Apa saja yang perlu dibawa pada saat hari-h acara?</AccordionTrigger>
+                                <AccordionTrigger>Apa saja yang perlu dibawa?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
-                                        <p>Jawaban menyusul</p>
+                                        <p>
+                                            Hal-hal yang perlu dibawa, dianjurkan untuk dibawa,
+                                            dan tidak boleh dibawa dapat dilihat pada menu
+                                            "Perlengkapan" pada pusat informasi diatas ya! 
+                                        </p>
                                     </AccordionContent>
                                 </AccordionItem>
                                 <AccordionItem value="item-2">
@@ -60,7 +64,7 @@ export default function QuickLinks() {
                                         <p>
                                             Titik kumpul: TUCH <br/>
                                             Waktu: 07.00 <br/>
-                                            Jangan sampai telat yaa!
+                                            Jangan sampai telat ya!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -68,7 +72,9 @@ export default function QuickLinks() {
                                     <AccordionTrigger>Apa yang terjadi jika saya terlambat ke titik kumpul?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
                                         <p>
-                                            Jawaban menyusul
+                                            Kami akan tetap tunggu selama 15 menit, diluar itu akan kami tinggal
+                                            dan kamu tidak akan mendapat refund {'('}sesuai dengan pernyataan
+                                            di pendaftaran{')'}. Jadi jangan sampai telat ya!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -76,7 +82,8 @@ export default function QuickLinks() {
                                     <AccordionTrigger>Apakah akan ada presensi?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
                                         <p>
-                                            Jawaban menyusul
+                                            Presensi akan dilakukan sebanyak 2x selama acara berlangsung
+                                            melalui google form, jadi pastikan agar baterai hpmu cukup!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -84,7 +91,8 @@ export default function QuickLinks() {
                                     <AccordionTrigger>Apakah Konsumsi Disediakan Panitia?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
                                         <p>
-                                            Jawaban menyusul
+                                            Ya! Kami akan menyediakan 1x konsumsi berat untuk kalian.
+                                            Oleh karena itu, jangan lupa sarapan dulu ya!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -92,7 +100,7 @@ export default function QuickLinks() {
                                     <AccordionTrigger>Bagaimana jika saya mengalami kendala kesehatan?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
                                         <p>
-                                            Jawaban menyusul
+                                            Peserta diwajibkan untuk membawa obat2an pribadi ya!
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
@@ -100,7 +108,18 @@ export default function QuickLinks() {
                                     <AccordionTrigger>Siapa yang bisa saya hubungi jika ada kendala?</AccordionTrigger>
                                     <AccordionContent className="flex flex-col gap-4 text-balance">
                                         <p>
-                                            Jawaban menyusul
+                                            Kamu dapat menghubungi panitia dibawah ini: <br/>
+                                            - Ifa : 081328608474 <br/>
+                                            - Dinar : 085888048351 <br/>
+                                        </p>
+                                    </AccordionContent>
+                                </AccordionItem>
+                                <AccordionItem value="item-8">
+                                    <AccordionTrigger>Apakah merokok diperbolehkan?</AccordionTrigger>
+                                    <AccordionContent className="flex flex-col gap-4 text-balance">
+                                        <p>
+                                            Peserta tidak boleh merokok saat sedang berada di CTI / company ya!
+                                            tapi tenang, kamu tetap bisa merokok di rest area nanti.
                                         </p>
                                     </AccordionContent>
                                 </AccordionItem>
