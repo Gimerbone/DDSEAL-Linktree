@@ -18,5 +18,5 @@ export async function getTimeInSeconds(): Promise<number> {
 
     const totalSeconds = Math.floor((event_date.getTime() - Date.now()) / 1000);
     
-    return totalSeconds;
+    return totalSeconds > 0 ? totalSeconds : 0;
 }
