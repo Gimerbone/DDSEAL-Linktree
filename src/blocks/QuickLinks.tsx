@@ -30,7 +30,7 @@ export default function QuickLinks() {
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
                 <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
                 <LinkContainer icon={PencilRuler} title = "Perlengkapan" link="https://drive.google.com/file/d/1r9W961UPm6sdCHvx53SKHP_KQ_-qlL1E/view?usp=drive_link"/>
-                <LinkContainer icon={Clapperboard} title = "Tanya Peserta" hasToast toastMsg="Video ini belum dapat diakses"/>
+                <LinkContainer icon={Clapperboard} title = "Dokumentasi" link="https://drive.google.com/drive/folders/1MR4jaScESjPyaXcDa9KJhzpEzjSunVgA"/>
                 
                 <Dialog>
                     <DialogTrigger>
