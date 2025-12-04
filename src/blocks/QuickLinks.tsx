@@ -1,6 +1,6 @@
 import { type LucideIcon } from "lucide-react";
 import { NotebookPen, Clapperboard, ArrowUpRight, Users, ClipboardList, FileText } from "lucide-react";
-import { Contact, ScrollText, BusFront, PencilRuler, MessageCircleMore } from "lucide-react";
+import { Contact, ScrollText, BusFront, PencilRuler, MessageCircleMore, Camera } from "lucide-react";
 
 import { toast } from "sonner";
 import {
@@ -30,8 +30,9 @@ export default function QuickLinks() {
                 <LinkContainer icon={FileText} title = "Template Dispen" link="https://drive.google.com/file/d/1M4ORLRumG3R0jUP_-dclo4Ea5i0guiBZ/view?usp=drive_link"/>
                 <LinkContainer icon={ScrollText} title = "Peraturan" link="https://drive.google.com/file/d/1yLOYd7zpWKpBskLuO2Hjn-RQEWkPGgFr/view?usp=drive_link"/>
                 <LinkContainer icon={PencilRuler} title = "Perlengkapan" link="https://drive.google.com/file/d/1r9W961UPm6sdCHvx53SKHP_KQ_-qlL1E/view?usp=drive_link"/>
-                <LinkContainer icon={Clapperboard} title = "Dokumentasi" link="https://drive.google.com/drive/folders/1MR4jaScESjPyaXcDa9KJhzpEzjSunVgA"/>
-                
+                <LinkContainer icon={Camera} title = "Dokumentasi" link="https://drive.google.com/drive/folders/1MR4jaScESjPyaXcDa9KJhzpEzjSunVgA"/>
+                <LinkContainer icon={Clapperboard} title = "After Movie" link="https://www.instagram.com/reel/DR1HOenkrwy/?utm_source=ig_web_copy_link"/>
+
                 <Dialog>
                     <DialogTrigger>
                         <LinkContainer icon={MessageCircleMore} title = "FAQ"/>
@@ -127,8 +128,6 @@ export default function QuickLinks() {
                         </div>
                     </DialogContent>
                 </Dialog>
-
-                <LinkContainer icon={NotebookPen} title = "Form Absensi dan Feedback" link="https://bit.ly/PRESENSI-DOUBLEDECKER2025"/>
             </div>
         </div>
     )
