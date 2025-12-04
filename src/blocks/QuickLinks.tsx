@@ -1,5 +1,5 @@
 import { type LucideIcon } from "lucide-react";
-import { NotebookPen, Clapperboard, ArrowUpRight, Users, ClipboardList, FileText } from "lucide-react";
+import { Clapperboard, ArrowUpRight, Users, ClipboardList, FileText } from "lucide-react";
 import { Contact, ScrollText, BusFront, PencilRuler, MessageCircleMore, Camera } from "lucide-react";
 
 import { toast } from "sonner";
